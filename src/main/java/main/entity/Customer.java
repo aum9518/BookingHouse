@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.validation.annotation.Validated;
 
 import java.time.LocalDate;
+import java.util.List;
+
 @Entity
 @Table(name = "customers")
 @Getter
@@ -34,4 +36,8 @@ public class Customer {
     private String phoneNumber;
     @NotNull
     private LocalDate dateOfBirth;
+    @ManyToMany
+    private List<Agency>agencies;
+    @OneToMany(mappedBy = "customerId")
+    private List<Booking> booking;
 }

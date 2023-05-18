@@ -1,23 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="BookingHouse:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6ac64d4-ebd9-4d37-8f4d-766642d2a484" name="Changes" comment="">
+    <list default="true" id="a6ac64d4-ebd9-4d37-8f4d-766642d2a484" name="Changes" comment="added Entity classes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/repository/AgencyRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/repository/BookingRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/repository/HouseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/repository/repositryImpl/AgencyRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/repository/repositryImpl/BookingRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/repository/repositryImpl/CustomerRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/repository/repositryImpl/HouseRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/service/AgencyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/service/BookingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/service/HouseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/service/serviceImpl/AgencyServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/service/serviceImpl/BookingServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/service/serviceImpl/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/service/serviceImpl/HouseServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/config/ConfigDispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/config/ConfigDispatcherServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/config/HibernateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/config/HibernateConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/config/WebAppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/config/WebAppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/entity/Agency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/entity/Agency.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/entity/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/entity/Booking.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/entity/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/entity/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/entity/House.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/enums/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/enums/Gender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/enums/HouseType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/enums/HouseType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/datasource.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/datasource.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,12 +42,20 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="2PxHLZK9lC88XRyFY4gWuzkVWVx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -59,7 +81,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 11.0.0-M6">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App" />
       <module name="BookingHouse" />
@@ -67,6 +89,97 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tomcat 11.0.0-M6" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 11.0.0-M6" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="BookingHouse:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="27e4701e-4154-4a76-b501-dca41e57a6dc" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="62007" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="BookingHouse:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="Tomcat Server.Tomcat 11.0.0-M6" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
@@ -81,11 +194,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684391773581</updated>
-      <workItem from="1684391779127" duration="8329000" />
+      <workItem from="1684391779127" duration="11464000" />
     </task>
+    <task id="LOCAL-00001" summary="added Entity classes">
+      <created>1684401756757</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684401756758</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added Entity classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Entity classes" />
   </component>
 </project>

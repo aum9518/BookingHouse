@@ -33,4 +33,8 @@ public class House {
     private String description;
     @NotNull
     private boolean isBooked;
+    @ManyToOne
+    private Agency agency;
+    @OneToOne(mappedBy = "houseId")
+    private Booking booking;
 }
