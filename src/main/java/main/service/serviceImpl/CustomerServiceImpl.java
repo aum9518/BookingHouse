@@ -13,8 +13,8 @@ import java.util.List;
 public class CustomerServiceImpl implements CustomerService {
     private final CustomerRepository repository;
     @Override
-    public String saveCustomer(Customer customer) {
-        return repository.saveCustomer(customer);
+    public void saveCustomer(Customer customer) {
+         repository.saveCustomer(customer);
     }
 
     @Override

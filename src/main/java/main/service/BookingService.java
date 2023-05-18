@@ -6,7 +6,7 @@ import main.entity.Booking;
 import java.util.List;
 
 public interface BookingService {
-    String saveBooking(Booking booking);
+    void saveBooking(Booking booking);
     List<Agency> getAllBookings();
     Agency getBookingById(Long id);
     void updateBooking(Long id, Booking newBooking);

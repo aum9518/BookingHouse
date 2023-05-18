@@ -5,7 +5,7 @@ import main.entity.Agency;
 import java.util.List;
 
 public interface AgencyRepository {
-    String saveAgency(Agency agency);
+    void saveAgency(Agency agency);
     List<Agency> getAllAgencies();
     Agency getAgencyById(Long id);
     void updateAgency(Long id, Agency newAgency);

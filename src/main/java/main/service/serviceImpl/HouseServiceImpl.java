@@ -13,8 +13,8 @@ import java.util.List;
 public class HouseServiceImpl implements HouseService {
     private final HouseRepository repository;
     @Override
-    public String saveHouse(House house) {
-        return repository.saveHouse(house);
+    public void saveHouse(House house) {
+         repository.saveHouse(house);
     }
 
     @Override

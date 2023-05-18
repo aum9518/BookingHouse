@@ -15,8 +15,8 @@ import java.util.List;
 public class BookingRepositoryImpl implements BookingRepository {
     private final EntityManager entityManager;
     @Override
-    public String saveBooking(Booking booking) {
-        return null;
+    public void saveBooking(Booking booking) {
+
     }
 
     @Override

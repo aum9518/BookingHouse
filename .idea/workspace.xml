@@ -9,8 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6ac64d4-ebd9-4d37-8f4d-766642d2a484" name="Changes" comment="added cascade type">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a6ac64d4-ebd9-4d37-8f4d-766642d2a484" name="Changes" comment="added repository and service">
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/api/AgencyApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/agency.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/repository/AgencyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/repository/AgencyRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/repository/BookingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/repository/BookingRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/repository/CustomerRepository.java" afterDir="false" />
@@ -38,6 +40,7 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -61,6 +64,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -189,7 +193,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684391773581</updated>
-      <workItem from="1684391779127" duration="15058000" />
+      <workItem from="1684391779127" duration="17721000" />
     </task>
     <task id="LOCAL-00001" summary="added Entity classes">
       <created>1684401756757</created>
@@ -212,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684405930945</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added repository and service">
+      <created>1684408629906</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684408629906</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +233,7 @@
     <MESSAGE value="added Entity classes" />
     <MESSAGE value="added repository and services" />
     <MESSAGE value="added cascade type" />
-    <option name="LAST_COMMIT_MESSAGE" value="added cascade type" />
+    <MESSAGE value="added repository and service" />
+    <option name="LAST_COMMIT_MESSAGE" value="added repository and service" />
   </component>
 </project>

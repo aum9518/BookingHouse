@@ -15,8 +15,8 @@ import java.util.List;
 public class HouseRepositoryImpl implements HouseRepository {
     private final EntityManager entityManager;
     @Override
-    public String saveHouse(House house) {
-        return null;
+    public void saveHouse(House house) {
+
     }
 
     @Override

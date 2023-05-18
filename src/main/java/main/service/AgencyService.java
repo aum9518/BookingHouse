@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface AgencyService {
 
-    String saveAgency(Agency agency);
+    void saveAgency(Agency agency);
     List<Agency> getAllAgencies();
     Agency getAgencyById(Long id);
     void updateAgency(Long id, Agency newAgency);

@@ -12,8 +12,8 @@ import java.util.List;
 public class AgencyServiceImpl implements AgencyService {
     private final AgencyRepository repository;
     @Override
-    public String saveAgency(Agency agency) {
-        return repository.saveAgency(agency);
+    public void saveAgency(Agency agency) {
+       repository.saveAgency(agency);
     }
 
     @Override

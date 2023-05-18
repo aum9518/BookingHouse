@@ -13,8 +13,8 @@ import java.util.List;
 public class BookingServiceImpl implements BookingService {
     private final BookingRepository repository;
     @Override
-    public String saveBooking(Booking booking) {
-        return repository.saveBooking(booking);
+    public void saveBooking(Booking booking) {
+         repository.saveBooking(booking);
     }
 
     @Override

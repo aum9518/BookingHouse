@@ -2,7 +2,6 @@ package main.repository.repositryImpl;
 
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import main.entity.Agency;
 import main.entity.Customer;
@@ -16,8 +15,8 @@ import java.util.List;
 public class CustomerRepositoryImpl implements CustomerRepository {
         private final EntityManager entityManager ;
     @Override
-    public String saveCustomer(Customer customer) {
-        return null;
+    public void saveCustomer(Customer customer) {
+
     }
 
     @Override
