@@ -36,8 +36,8 @@ public class Customer {
     private String phoneNumber;
     @NotNull
     private LocalDate dateOfBirth;
-    @ManyToMany
+    @ManyToMany(cascade = {CascadeType.DETACH,CascadeType.MERGE})
     private List<Agency>agencies;
-    @OneToMany(mappedBy = "customerId")
+    @OneToMany(mappedBy = "customerId",cascade = {CascadeType.DETACH,CascadeType.MERGE})
     private List<Booking> booking;
 }

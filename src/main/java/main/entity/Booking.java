@@ -16,10 +16,10 @@ public class Booking {
     @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "booking_gen")
     @SequenceGenerator(name = "booking_gen",sequenceName = "booking_seq",allocationSize = 1)
     private Long id;
-    @OneToOne
+    @OneToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE})
     @Value("house_id")
     private House houseId;
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE})
     @Value("customer_id")
     private Customer customerId;
 }

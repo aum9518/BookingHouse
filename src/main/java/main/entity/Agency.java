@@ -32,7 +32,7 @@ public class Agency {
     @Column(length = 1000)
     @NotNull
     private String image;
-    @ManyToMany(mappedBy = "agencies")
+    @ManyToMany(mappedBy = "agencies",cascade = {CascadeType.MERGE,CascadeType.DETACH})
     private List<Customer>customers;
     @OneToMany (mappedBy = "agency")
     private List<House> houses;

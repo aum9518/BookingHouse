@@ -33,8 +33,8 @@ public class House {
     private String description;
     @NotNull
     private boolean isBooked;
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.MERGE,CascadeType.DETACH,CascadeType.PERSIST})
     private Agency agency;
-    @OneToOne(mappedBy = "houseId")
+    @OneToOne(mappedBy = "houseId",cascade = {CascadeType.DETACH, CascadeType.MERGE,CascadeType.PERSIST})
     private Booking booking;
 }
