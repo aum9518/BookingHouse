@@ -1,4 +1,39 @@
 package main.service.serviceImpl;
 
-public class CustomerServiceImpl {
+import lombok.RequiredArgsConstructor;
+import main.entity.Agency;
+import main.entity.Customer;
+import main.repository.CustomerRepository;
+import main.service.CustomerService;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+@Service
+@RequiredArgsConstructor
+public class CustomerServiceImpl implements CustomerService {
+    private final CustomerRepository repository;
+    @Override
+    public String saveCustomer(Customer customer) {
+        return repository.saveCustomer(customer);
+    }
+
+    @Override
+    public List<Agency> getAllCustomers() {
+        return repository.getAllCustomers();
+    }
+
+    @Override
+    public Agency getCustomerById(Long id) {
+        return repository.getCustomerById(id);
+    }
+
+    @Override
+    public void updateCustomer(Long id, Customer newCustomer) {
+        repository.updateCustomer(id,newCustomer);
+    }
+
+    @Override
+    public void deleteCustomerById(Long id) {
+        repository.deleteCustomerById(id);
+    }
 }
