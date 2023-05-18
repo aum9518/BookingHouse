@@ -1,2 +1,5 @@
-package main.enums;public enum HouseType {
+package main.enums;
+
+public enum HouseType {
+    VILLA,APARTMENT;
 }
