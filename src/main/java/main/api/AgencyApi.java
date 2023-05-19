@@ -17,7 +17,7 @@ public class AgencyApi {
     @GetMapping
     public String getAllAgencies(Model model) {
         model.addAttribute("agencies", service.getAllAgencies());
-        return "agency";
+        return "index";
     }
 
     @GetMapping("/new")
@@ -36,9 +36,37 @@ public class AgencyApi {
         service.deleteAgencyById(id);
         return "redirect:/agencies";
     }
-    @GetMapping("/byId")
+    @GetMapping("/{id}")
     public String getAgencyById(@PathVariable("id") Long id,Model model){
-        model.addAttribute("info",service.getAgencyById(id));
-        return "agencyInfo";
+       try{
+           Agency agency = service.getAgencyById(id);
+           if (agency == null){
+               return "errorPage";
+           }
+           model.addAttribute("info",agency);
+           return "agencyInfo";
+       } catch (Exception e) {
+           System.out.println(e.getMessage());
+       }
+       return "errorPage";
+    }
+    @GetMapping("/{id}/edit")
+    public String update(@PathVariable("id")Long id, Model model){
+       try{
+           Agency agency = service.getAgencyById(id);
+           if (agency  == null){
+               return "errorPage";
+           }
+           model.addAttribute("editAgency",agency);
+           return "updateAgency";
+       } catch (Exception e) {
+           System.out.println(e.getMessage());
+       }
+        return "updateAgency";
+    }
+    @PostMapping("/updateAgency/{id}")
+    public String saveUpdate(@ModelAttribute("editAgency") Agency agency, @PathVariable("id") Long id){
+        service.updateAgency(id,agency);
+        return "redirect:agencies";
     }
 }
