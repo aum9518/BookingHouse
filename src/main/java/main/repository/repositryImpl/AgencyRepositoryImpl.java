@@ -1,6 +1,7 @@
 package main.repository.repositryImpl;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import main.entity.Agency;
@@ -13,6 +14,7 @@ import java.util.List;
 @Transactional
 @RequiredArgsConstructor
 public class AgencyRepositoryImpl implements AgencyRepository {
+    @PersistenceContext
         private final EntityManager entityManager ;
 
     @Override

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="card" style="width: 18rem;" th:object="${info}">
+        <img th:src="${info.getImage()}" class="card-img-top" alt="Agency's image">
+        <div class="card-body">
+            <h5 class="card-title" th:text="${info.getName()}">Agency</h5>
+            <h6 class="card-title" th:text="${info.getCountry()}">Country</h6>
+            <h6 class="card-title" th:text="${info.getEmail()}">Email</h6>
+            <h6 class="card-title" th:text="${info.getPhoneNumber()}">Phone number</h6>
+        </div>
+</div>
+
+</body>
+</html>
