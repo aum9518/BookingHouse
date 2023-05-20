@@ -1,7 +1,6 @@
 package main.service.serviceImpl;
 
 import lombok.RequiredArgsConstructor;
-import main.entity.Agency;
 import main.entity.Customer;
 import main.repository.CustomerRepository;
 import main.service.CustomerService;
@@ -18,12 +17,12 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public List<Agency> getAllCustomers() {
+    public List<Customer> getAllCustomers() {
         return repository.getAllCustomers();
     }
 
     @Override
-    public Agency getCustomerById(Long id) {
+    public Customer getCustomerById(Long id) {
         return repository.getCustomerById(id);
     }
 
