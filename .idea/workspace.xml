@@ -9,18 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6ac64d4-ebd9-4d37-8f4d-766642d2a484" name="Changes" comment="added save,getById">
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/exceptions/MyException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/6896717.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/updateAgency.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+    <list default="true" id="a6ac64d4-ebd9-4d37-8f4d-766642d2a484" name="Changes" comment="added main page">
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/api/IndexApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/api/AgencyApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/api/AgencyApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/config/HibernateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/config/HibernateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/6896717.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/agency.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/agency.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/updateAgency.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/updateAgency.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +30,8 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="HTML File" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -102,6 +99,7 @@
       </method>
     </configuration>
     <configuration name="Tomcat 11.0.0-M6" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 11.0.0-M6" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/index" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="BookingHouse:war exploded">
@@ -206,7 +204,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684391773581</updated>
-      <workItem from="1684391779127" duration="46636000" />
+      <workItem from="1684391779127" duration="57081000" />
     </task>
     <task id="LOCAL-00001" summary="added Entity classes">
       <created>1684401756757</created>
@@ -250,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684491474580</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added main page">
+      <created>1684527135745</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1684527135745</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,6 +290,7 @@
     <MESSAGE value="added repository and service" />
     <MESSAGE value="added repository and service methods" />
     <MESSAGE value="added save,getById" />
-    <option name="LAST_COMMIT_MESSAGE" value="added save,getById" />
+    <MESSAGE value="added main page" />
+    <option name="LAST_COMMIT_MESSAGE" value="added main page" />
   </component>
 </project>

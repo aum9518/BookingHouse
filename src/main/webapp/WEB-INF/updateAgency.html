@@ -5,7 +5,7 @@
     <title>Update agency</title>
 </head>
 <body>
-<form th:method="POST" th:action="@{/updateAgency/{id} (id=${editAgency.getId()})}" th:object="${editAgency}">
+<form th:method="POST" th:action="@{/agencies/updateAgency/{id} (id=${editAgency.getId()})}" th:object="${editAgency}">
     <div>
         <input type="hidden" name="id" th:field="${id}">
     </div>

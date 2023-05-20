@@ -17,7 +17,7 @@ public class AgencyApi {
     @GetMapping
     public String getAllAgencies(Model model) {
         model.addAttribute("agencies", service.getAllAgencies());
-        return "index";
+        return "agency";
     }
 
     @GetMapping("/new")
@@ -67,6 +67,6 @@ public class AgencyApi {
     @PostMapping("/updateAgency/{id}")
     public String saveUpdate(@ModelAttribute("editAgency") Agency agency, @PathVariable("id") Long id){
         service.updateAgency(id,agency);
-        return "redirect:agencies";
+        return "redirect:/agencies";
     }
 }

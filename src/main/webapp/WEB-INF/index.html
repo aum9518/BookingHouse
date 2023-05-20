@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en,ru">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>index</title>
@@ -8,7 +8,8 @@
           crossorigin="anonymous">
     <link href="/WEB-INF/style.css" rel="stylesheet">
 </head>
-<body><style>
+<body>
+<style>
     {
         font-family: 'roboto', sans-serif;
     }
@@ -277,8 +278,8 @@
         <div class="container">
 
             <ul class="menu menu_active">
-                <li class="menu_item"><a href="index.html" class="menu_link">Main</a></li>
-                <li class="menu_item"><a href="agency.html" class="menu_link"> Agency</a></li>
+                <li class="menu_item"><a href="/index" class="menu_link">Main</a></li>
+                <li class="menu_item"><a href="/agencies" class="menu_link"> Agency</a></li>
                 <li class="menu_item"><a href="#require" class="menu_link">  Customer </a></li>
                 <li class="menu_item"><a href="#require" class="menu_link"> House  </a></li>
                 <li class="menu_item"><a href="#" class="menu_link"> Booking </a></li>
