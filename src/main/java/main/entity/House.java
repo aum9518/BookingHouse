@@ -32,7 +32,7 @@ public class House {
     @NotNull
     private String description;
     @NotNull
-    private boolean isBooked;
+    private Boolean isBooked;
     @ManyToOne(cascade = {CascadeType.MERGE,CascadeType.DETACH,CascadeType.PERSIST})
     private Agency agency;
     @OneToOne(mappedBy = "houseId",cascade = {CascadeType.DETACH, CascadeType.MERGE,CascadeType.PERSIST})

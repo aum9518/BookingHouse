@@ -18,12 +18,12 @@ public class HouseServiceImpl implements HouseService {
     }
 
     @Override
-    public List<Agency> getAllHouses() {
+    public List<House> getAllHouses() {
         return repository.getAllHouses();
     }
 
     @Override
-    public Agency getHouseById(Long id) {
+    public House getHouseById(Long id) {
         return repository.getHouseById(id);
     }
 

@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Assign</title>
+</head>
+<body>
+     <form th:method="POST" action="/assign" >
+        <label for="customerId" >Customer ID</label>
+         <input type="text" id="customerId" name="customerId" th:value="${customerId}" required><br><br>
+         <label for="agencyId" >Agency id</label>
+         < <input type="text" id="agencyId" name="agencyId" th:value="${agencyId}" required><br><br>
+         <input type="submit" value="Assign">
+
+     </form>
+</body>
+</html>
