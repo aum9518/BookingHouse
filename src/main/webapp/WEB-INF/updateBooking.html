@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update booking</title>
+</head>
+<body>
+<form  th:action="@{/bookings/saveUpdate/{id}(id=${booking.getId()})}" th:object="${booking}" method="POST">
+    <!-- Input fields for booking details -->
+    <label for="houseId">House:</label>
+    <!-- <input type="text" name="customerId" id="customerId" th:field="*{customerId}"}>-->
+    <select id="houseId" name="houseName">
+        <option th:each="house : ${house}" th:value="${house.id}" th:text="${house.houseType}"></option>
+    </select>
+
+    <label for="customerId">Customer:</label>
+    <!-- <input type="text" name="houseId" id="houseId" th:field="*{houseId}">-->
+    <select id="customerId" name="customerName" >
+        <option th:each="customer : ${customers}" th:value="${customer.id}" th:text="${customer.firstName}"></option>
+    </select>
+    <button type="submit">Save</button>
+</form>
+
+</body>
+</html>

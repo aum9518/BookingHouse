@@ -9,34 +9,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6ac64d4-ebd9-4d37-8f4d-766642d2a484" name="Changes" comment="added customers get all method">
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/api/HouseApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/customerAssign.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/customerInfo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/errorPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/house.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/newCustomer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/newHouse.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/updateCustomer.html" afterDir="false" />
+    <list default="true" id="a6ac64d4-ebd9-4d37-8f4d-766642d2a484" name="Changes" comment="added house method">
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/api/BookingApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/booking.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/editHouse.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/infoHouse.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/newBooking.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/searchAgency.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/updateBooking.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/api/AgencyApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/api/AgencyApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/api/CustomerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/api/CustomerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/api/HouseApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/api/HouseApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/entity/Agency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/entity/Agency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/entity/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/entity/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/entity/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/entity/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/entity/House.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/enums/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/enums/Gender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/repository/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/enums/HouseType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/enums/HouseType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/repository/BookingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/repository/BookingRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/repository/HouseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/repository/HouseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/repository/repositryImpl/BookingRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/repository/repositryImpl/BookingRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/repository/repositryImpl/CustomerRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/repository/repositryImpl/CustomerRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/repository/repositryImpl/HouseRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/repository/repositryImpl/HouseRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/service/BookingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/service/HouseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/service/HouseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/service/serviceImpl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/service/serviceImpl/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/service/serviceImpl/BookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/service/serviceImpl/BookingServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/service/serviceImpl/HouseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/service/serviceImpl/HouseServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/agency.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/agency.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/agencyInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/agencyInfo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/customer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/customerAssign.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/customerAssign.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/house.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/house.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/newAgency.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/newAgency.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/updateAgency.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/updateAgency.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/newHouse.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/newHouse.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +233,7 @@
       <option name="presentableId" value="Default" />
       <updated>1684391773581</updated>
       <workItem from="1684391779127" duration="80853000" />
-      <workItem from="1684642178402" duration="24846000" />
+      <workItem from="1684642178402" duration="120421000" />
     </task>
     <task id="LOCAL-00001" summary="added Entity classes">
       <created>1684401756757</created>
@@ -290,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684591057160</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added house method">
+      <created>1684729861290</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1684729861290</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,6 +343,7 @@
     <MESSAGE value="added main page" />
     <MESSAGE value="added worked update and pages" />
     <MESSAGE value="added customers get all method" />
-    <option name="LAST_COMMIT_MESSAGE" value="added customers get all method" />
+    <MESSAGE value="added house method" />
+    <option name="LAST_COMMIT_MESSAGE" value="added house method" />
   </component>
 </project>

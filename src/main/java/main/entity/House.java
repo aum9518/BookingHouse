@@ -18,23 +18,19 @@ public class House {
     @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "house_gen")
     @SequenceGenerator(name = "house_gen",sequenceName = "house_seq",allocationSize = 1)
     private Long id;
-    @NotNull
+    @Enumerated(EnumType.STRING)
     @Value("house_type")
     private HouseType houseType;
-    @NotNull
     private String address;
-    @NotNull
     private int price;
-    @NotNull
     private int room;
-    @NotNull
     private String country;
-    @NotNull
     private String description;
-    @NotNull
     private Boolean isBooked;
-    @ManyToOne(cascade = {CascadeType.MERGE,CascadeType.DETACH,CascadeType.PERSIST})
+    @Column(length = 1000)
+    private String image;
+    @ManyToOne(cascade = {CascadeType.MERGE,CascadeType.DETACH,CascadeType.MERGE})
     private Agency agency;
-    @OneToOne(mappedBy = "houseId",cascade = {CascadeType.DETACH, CascadeType.MERGE,CascadeType.PERSIST})
+    @OneToOne(mappedBy = "houseId",cascade = {CascadeType.DETACH, CascadeType.MERGE,CascadeType.REFRESH})
     private Booking booking;
 }

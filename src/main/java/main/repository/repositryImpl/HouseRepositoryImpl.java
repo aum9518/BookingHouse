@@ -17,7 +17,9 @@ public class HouseRepositoryImpl implements HouseRepository {
     @PersistenceContext
     private final EntityManager entityManager;
     @Override
-    public void saveHouse(House house) {
+    public void saveHouse(Long agencyId,House house) {
+        Agency agency = entityManager.find(Agency.class, agencyId);
+        house.setAgency(agency);
         entityManager.persist(house);
     }
 

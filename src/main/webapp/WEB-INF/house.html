@@ -284,7 +284,7 @@
         border: 3px solid black;
 
     }
-    .box-agency{
+    .box-house{
         display: flex;
 
         margin: 105px 50px 50px 50px;
@@ -299,6 +299,7 @@
         width:max-content;
         high:600px;
     }
+
 </style>
 <header>
     <nav>
@@ -347,28 +348,49 @@
                 offset- coll-lg-10">
                 <div class="bax-all">
                     <div class="box-agency">
-                        <div class="card-agency" style="width: 18rem;" th:each="house:${houses}" >
+                      <!--  <div class="card-agency" style="width: 18rem;" th:each="house:${houses}" >
                             <div class="card-body">
-                             <!--   <h5 class="card-title" th:text="${house.getHouseType()}">House type</h5>-->
+                                <h5 class="card-title" th:text="${house.getHouseType()}">House type</h5>
                                 <h6 class="card-title" th:text="${house.getCountry()}">Country</h6>
                                 <h6 class="card-title" th:text="${house.getAddress()}">Address</h6>
                                 <h6 class="card-title" th:text="${house.description}">Description</h6>
-                                <h6 class="card-title" th:text="${house.getBooking()}">Status</h6>
+                                <h6 class="card-title" th:text="${house.getIsBooked()}">Status</h6>
                                 <h6 class="card-title" th:text="${house.getRoom()}">Room</h6>
                                 <h6 class="card-title" th:text="${house.getPrice()}">Price</h6>
-                                <h6 class="card-title" th:text="${house.getAgency().getName()}">Agency name</h6>
-                            </div>
+                                <h6 class="card-title" th:text="${house.getAgency()}">Agency</h6>
+                            </div>-->
+
+                        <div class="container" style="width: 80%; margin: 0 auto">
+                            <div class="box-house">
+                            <div class="card" style="width: 18rem;" th:each="house:${houses}">
+                                <img th:src="${house.getImage()}" class="card-img-top" alt="House's image">
+                                <div class="card-body">
+                                    <h5 class="card-title" th:text="${house.getHouseType()}">House type</h5>
+                                    <h5 class="card-title" th:text="${house.getAddress()}">Address</h5>
+                                    <p class="card-text" th:text="${house.getPrice()}">Price</p>
+                                    <p class="card-text" th:text="${house.getRoom()}">Room</p>
+                                    <p class="card-text" th:text="${house.getCountry()}">Country</p>
+                                    <p class="card-text" th:text="${house.getDescription()}">Description</p>
+                                    <p class="card-text" th:text="${house.getIsBooked()}">Is booked</p>
                             <div class="card-body">
-                               <!-- <a th:href="@{/customers/{id} (id=${customer.getId()})}"  class="card-link">Info</a>
-                                <a th:href="@{/customers/{id}/edit (id=${customer.getId()})}" class="card-link">Update</a>
-                                <a th:href="@{/customers/assign (id=${customer.getId()})}" class="card-link">Assign</a>-->
-                                <form th:method="DELETE" th:action="@{/customers/{id}/delete (id=${customer.getId()})}" >
+                                <form th:method="GET" th:action="@{/houses/house/{id}(id=${house.getId()})}" >
+                                    <input type="submit" th:value="Info">
+                                </form>
+                                <form th:method="GET" th:action="@{/houses/update/{id}(id=${house.getId()})}" >
+                                    <input type="submit" th:value="Update">
+                                </form>
+                                <form th:method="DELETE" th:action="@{/houses/{id}/delete (id=${house.getId()})}" >
                                     <input type="submit" th:value="Delete">
                                 </form>
                             </div>
+                                </div>
                         </div>
                     </div>
-                    <a href="/houses/newHouse">Create new House</a>
+                            <div style="text-align: center"  >
+                                <a th:href="@{houses/createHouse}">
+                                    <button class="btn btn-primary"> Add New House</button>
+                                </a>
+                            </div>
                 </div>
             </div>
         </div>

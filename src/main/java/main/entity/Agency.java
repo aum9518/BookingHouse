@@ -19,21 +19,16 @@ public class Agency {
     @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "agency_gen")
     @SequenceGenerator(name = "agency_gen",sequenceName = "agency_seq",allocationSize = 1)
     private Long id;
-    @NotNull
     private String name;
-    @NotNull
     private String country;
     @Value("phone_number")
-    @NotNull
     private String phoneNumber;
-    @NotNull
     @Column(unique = true)
     private String email;
     @Column(length = 1000)
-    @NotNull
     private String image;
-    @ManyToMany(mappedBy = "agencies",cascade = {CascadeType.MERGE,CascadeType.DETACH})
+    @ManyToMany(mappedBy = "agencies",cascade = {CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
     private List<Customer>customers;
-    @OneToMany (mappedBy = "agency")
+    @OneToMany (mappedBy = "agency",cascade = {CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
     private List<House> houses;
 }

@@ -22,22 +22,17 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "customer_gen")
     @SequenceGenerator(name = "customer_gen",sequenceName = "customer_seq",allocationSize = 1)
     private Long id;
-    @NotNull
     @Value("first_name")
     private String firstName;
-    @NotNull
     @Value("last_name")
     private String lastName;
     @Column(unique = true)
     private String email;
-    @NotNull
     private Gender gender;
-    @NotNull
     private String phoneNumber;
-    @NotNull
     private LocalDate dateOfBirth;
-    @ManyToMany(cascade = {CascadeType.DETACH,CascadeType.MERGE})
+    @ManyToMany(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.REFRESH,CascadeType.PERSIST})
     private List<Agency>agencies;
-    @OneToMany(mappedBy = "customerId",cascade = {CascadeType.DETACH,CascadeType.MERGE})
+    @OneToMany(mappedBy = "customerId",cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.REFRESH})
     private List<Booking> booking;
 }

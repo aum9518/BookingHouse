@@ -6,10 +6,10 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import main.entity.Agency;
 import main.entity.Customer;
-import main.repository.AgencyRepository;
 import main.repository.CustomerRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 @Repository
 @Transactional
@@ -53,6 +53,21 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     public void assignCustomerToAgency(Long customerId, Long agencyId) {
         Customer customer = entityManager.find(Customer.class, customerId);
         Agency agency = entityManager.find(Agency.class, agencyId);
-        agency.getCustomers().add(customer);
+        if (customer !=null && agency!=null){
+            List<Customer> customers = agency.getCustomers();
+            List<Agency> agencies = customer.getAgencies();
+
+            customer.setAgencies(agencies);
+            agency.setCustomers(customers);
+
+            entityManager.merge(customer);
+//            entityManager.merge(agency);
+        }
+//        List<Agency> agencies = new ArrayList<>();
+//        List<Customer> customers = new ArrayList<>();
+//            Agency agency = entityManager.find(Agency.class, agencyId);
+//            agency.setCustomers(customers);
+//        customer.setAgencies(agencies);
+//       entityManager.merge(customer);
     }
 }

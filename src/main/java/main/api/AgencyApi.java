@@ -69,4 +69,10 @@ public class AgencyApi {
         service.updateAgency(id,agency);
         return "redirect:/agencies";
     }
+
+    @GetMapping("/search")
+    public String searchAgency(@RequestParam("word") String word,Model model){
+        model.addAttribute("agencies",service.searchAgency(word));
+        return "searchAgency";
+    }
 }

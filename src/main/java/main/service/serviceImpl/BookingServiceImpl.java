@@ -1,7 +1,6 @@
 package main.service.serviceImpl;
 
 import lombok.RequiredArgsConstructor;
-import main.entity.Agency;
 import main.entity.Booking;
 import main.repository.BookingRepository;
 import main.service.BookingService;
@@ -11,29 +10,33 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class BookingServiceImpl implements BookingService {
+
     private final BookingRepository repository;
-    @Override
-    public void saveBooking(Booking booking) {
-         repository.saveBooking(booking);
-    }
+
 
     @Override
-    public List<Agency> getAllBookings() {
+    public List<Booking> getAllBookings() {
+
         return repository.getAllBookings();
     }
 
     @Override
-    public Agency getBookingById(Long id) {
+    public void save(Booking booking) {
+        repository.save(booking);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        repository.deleteById(id);
+    }
+
+    @Override
+    public void updateBooking(Long id, Booking booking) {
+        repository.updateBooking(id,booking);
+    }
+
+    @Override
+    public Booking getBookingById(Long id) {
         return repository.getBookingById(id);
-    }
-
-    @Override
-    public void updateBooking(Long id, Booking newBooking) {
-        repository.updateBooking(id,newBooking);
-    }
-
-    @Override
-    public void deleteBookingById(Long id) {
-        repository.deleteBookingById(id);
     }
 }

@@ -310,6 +310,12 @@
         width:max-content;
         high:600px;
     }
+    .searching{
+        margin: 105px 50px 50px 50px;
+        padding-left: 40px;
+        width: fit-content;
+        high: 500px
+    }
 </style>
 <header>
     <nav>
@@ -356,10 +362,15 @@
         <div class="row">
             <div class="col-md-12 offset-md-0 coll-lg-10
                 offset- coll-lg-10">
+                <div class="searching" >
+                    <form th:action="@{houses/search}" method="GET">
+                        <input type="text" name="word" placeholder="Enter a word">
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
                 <div class="bax-all">
                 <div class="box-agency">
                 <div class="card-agency" style="width: 18rem;" th:each="agency:${agencies}" >
-      <!--  <a href="/agencies/new">Create new agency</a>&ndash;&gt;&ndash;&gt;&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
             <img th:src="${agency.getImage()}" class="card-img-top" alt="Agency's image">
                     <div class="card-body">
                         <h5 class="card-title" th:text="${agency.getName()}">Agency</h5>
@@ -373,7 +384,7 @@
                         <li class="list-group-item">A third item</li>-->
                     </ul>
                     <div class="card-body">
-                        <a th:href="@{/agencies/{id} (id=${agency.getId()})}"  class="card-link">Info</a>
+                        <a th:href="@{houses/new/{agencyId}(id=${agency.getId()})}"  class="card-link">Info</a>
                         <a th:href="@{/agencies/{id}/edit (id=${agency.getId()})}" class="card-link">Update</a>
                         <form th:method="DELETE" th:action="@{/agencies/{id}/delete (id=${agency.getId()})}" >
                             <input type="submit" th:value="Delete">

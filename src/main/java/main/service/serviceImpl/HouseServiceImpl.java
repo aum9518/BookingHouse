@@ -1,21 +1,25 @@
 package main.service.serviceImpl;
 
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import main.entity.Agency;
 import main.entity.House;
+import main.repository.AgencyRepository;
 import main.repository.HouseRepository;
 import main.service.HouseService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
+@Transactional
 @RequiredArgsConstructor
 public class HouseServiceImpl implements HouseService {
     private final HouseRepository repository;
+    private final AgencyRepository agencyRepository;
     @Override
-    public void saveHouse(House house) {
-         repository.saveHouse(house);
+    public void saveHouse(Long agencyId,House house) {
+       repository.saveHouse(agencyId,house);
     }
+
 
     @Override
     public List<House> getAllHouses() {

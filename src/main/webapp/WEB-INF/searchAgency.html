@@ -1,0 +1,20 @@
+<!-- searchAgency.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Search Agency</title>
+</head>
+<body>
+<h1>Search Results</h1>
+<div class="card-agency" style="width: 18rem;" th:each="agency:${agencies}" >
+    <img th:src="${agency.getImage()}" class="card-img-top" alt="Agency's image">
+    <div class="card-body">
+        <h5 class="card-title" th:text="${agency.getName()}">Agency</h5>
+        <h6 class="card-title" th:text="${agency.getCountry()}">Country</h6>
+        <h6 class="card-title" th:text="${agency.getEmail()}">Email</h6>
+        <h6 class="card-title" th:text="${agency.getPhoneNumber()}">Phone number</h6>
+    </div>
+</div>
+</table>
+</body>
+</html>

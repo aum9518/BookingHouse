@@ -6,13 +6,15 @@
     <title>Assign</title>
 </head>
 <body>
-     <form th:method="POST" action="/assign" >
-        <label for="customerId" >Customer ID</label>
-         <input type="text" id="customerId" name="customerId" th:value="${customerId}" required><br><br>
-         <label for="agencyId" >Agency id</label>
-         < <input type="text" id="agencyId" name="agencyId" th:value="${agencyId}" required><br><br>
-         <input type="submit" value="Assign">
-
+     <form th:method="POST" th:action="@{/customers/saveAssign/{id}(id=${customers.getId()})} "  th:object="${customers}">
+         <div class="mb-3">
+             <label for="agencyName" class="form-label">Select agency</label>
+             <select class="form-select" id="agencyName" name="agencyName" required>
+                 <option value="">Choose...</option>
+                 <option th:each="agency1 : ${agency}" th:value="${agency1.getId()}" th:text="${agency1.name}"></option>
+             </select>
+         </div>
+         <button type="submit">Assign agency</button>
      </form>
 </body>
 </html>

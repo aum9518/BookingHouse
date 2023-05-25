@@ -4,16 +4,23 @@ import lombok.RequiredArgsConstructor;
 import main.entity.Agency;
 import main.entity.Customer;
 import main.exceptions.MyException;
+import main.service.AgencyService;
 import main.service.CustomerService;
+import org.dom4j.rule.Mode;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 @Controller
 @RequestMapping("/customers")
 @RequiredArgsConstructor
 public class CustomerApi {
     private final CustomerService service;
+    private final AgencyService agency;
     @GetMapping
     public String getAllCustomer(Model model) {
         model.addAttribute("customers", service.getAllCustomers());
@@ -73,17 +80,30 @@ public class CustomerApi {
         service.updateCustomer(id,customer);
         return "redirect:/customers";
     }
-    @GetMapping("/assign/{customerId}/{agencyId}")
-    public String showAssignForm(@PathVariable("customerId") Long customerId
-    ,@PathVariable("agencyId")Long agencyId, Model model){
-        model.addAttribute("customerId" ,customerId);
-        model.addAttribute("agencyId", agencyId);
+/*    @GetMapping("/assign/{id}")
+    public String assignCostumerToAgency(Model model,@PathVariable("id") Long id){
+        Customer customer = service.getCustomerById(id);
+        model.addAttribute("customers", customer);
+        model.addAttribute("agency",agency.getAllAgencies());
         return "customerAssign";
     }
-        @PostMapping("/assign")
-    public String assignCustomerToAgency(@RequestParam("customerId") Long customerId,
-                                         @RequestParam("agencyId") Long agencyId){
-        service.assignCustomerToAgency(customerId,agencyId);
+    @PostMapping("/saveAssign/{id}")
+    public String saveAssign( @RequestParam("agencyName") List<Long> agencyId,
+                              @PathVariable Long id,@ModelAttribute("customers") Customer customer){
+        service.assignCustomerToAgency(customer.getId(), agencyId);
+        return "redirect:/customers";
+    }*/
+    @GetMapping("/assign/{id}")
+    public  String assignCustomerToAgency(@PathVariable Long id,Model model){
+        Customer customer = service.getCustomerById(id);
+        model.addAttribute("customers",customer);
+        model.addAttribute("agency",agency.getAllAgencies());
+        return "customerAssign";
+    }
+    @PostMapping("/saveAssign/{id}")
+    public String saveAssign(@RequestParam("agencyName") Long agencyId,
+                             @PathVariable Long id){
+        service.assignCustomerToAgency(id,agencyId);
         return "redirect:/customers";
     }
 
